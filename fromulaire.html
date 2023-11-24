@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulaire</title>
+
+    <style>
+        nav {
+            float: right;
+        }
+
+        .menu {
+            background-color: antiquewhite;
+            list-style-type: none;
+        }
+
+        .menu>li {
+            display: inline-block;
+            margin: auto;
+        }
+
+        .menu>li>a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+
+        .menu>li:hover {
+            border-bottom: 4px solid aqua;
+        }
+
+        .service {
+            position: relative;
+        }
+
+        .sous-menu {
+            list-style-type: none;
+            position: absolute;
+            left: 0%;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            padding: 0px;
+            margin: 5px 0;
+        }
+
+        .service:hover .sous-menu {
+            max-height: 150px;
+        }
+
+        .sous-menu>li {
+            text-decoration: none;
+            text-align: center;
+            background-color: antiquewhite;
+            padding: 5px;
+            border: 1px;
+
+        }
+
+        .sous-menu>li>a {
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .sous-menu>li:hover {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Acceuil</a></li>
+                <li class="service"><a href="#">Services</a>
+                    <ul class="sous-menu">
+                        <li><a href="#">service 1</a></li>
+                        <li><a href="#">service 2</a></li>
+                        <li><a href="#">service 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="/">References</a></li>
+                <li><a href="/">Contactes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 align="center">remplissez ce formulaire</h1>
+    <form>
+        <div>
+            <label for="last name">last name</label>
+            <input type="text" placeholder="enter name" minlength="3" maxlength="30">
+         </div>
+         
+         <div>
+            <label for="firstname">first name</label>
+            <input type="text" placeholder="enter first name" minlength="3" maxlength="30">
+         </div>
+
+         <div>
+            <label for="email">email</label>
+            <input type="email" placeholder="enter email" minlength="3" maxlength="30">
+         </div>
+
+         <div>
+            <label for="code postal">code postal</label>
+            <input type="number" placeholder="enter postal code">
+         </div>
+
+         <div>
+            <label for="phone number">phone number</label>
+            <input type="tel" name="telephone" id="telephone" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}">
+         </div>
+         <div>
+            <label for="Birth">date of Birth</label>
+            <input type="date" >
+         </div>
+
+         <fieldset>
+            <legend>Votre Statue</legend>
+            <div>
+                <label for="choix1">Etudiant</label>
+                <input type="checkbox" name="choix1" id="choix1">
+            </div>
+            <div>
+                <label for="choix2">Proffessionel</label>
+                <input type="checkbox" name="choix2" id="choix2">
+            </div>
+         </fieldset>
+         <fieldset>
+            <label>formation</label>
+            <select name="choixFormation" id="choixFormation">
+                <option value="none">none</option>
+                <option value="FA">FA</option>
+                <option value="FE">FE</option>
+            </select>
+
+         </fieldset>
+    </form>
+</body>
+
+</html>
+
+           
